@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8L9-ZN-11y">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZaQ-Jf-pdI">
+                                <rect key="frame" x="157" y="587" width="60" height="60"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="0xX-r9-h46"/>
+                                    <constraint firstAttribute="height" constant="60" id="Cpx-Wy-a3n"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mmM-50-Rar"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZaQ-Jf-pdI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8cm-6g-JCs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZaQ-Jf-pdI" secondAttribute="bottom" constant="20" id="cxn-MG-UF2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rNe-vb-c85"/>
+                    <connections>
+                        <outlet property="cameraBtn" destination="ZaQ-Jf-pdI" id="VRP-Zn-BtW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="966" y="109"/>
+        </scene>
+        <!--Prev View Controller-->
+        <scene sceneID="epr-gP-GZM">
+            <objects>
+                <viewController storyboardIdentifier="PrevViewController" id="hdE-r8-RUE" customClass="PrevViewController" customModule="CustomCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iZu-vf-ItA"/>
+                        <viewControllerLayoutGuide type="bottom" id="aWa-Ew-d4f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HKL-R6-Ift">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uku-EG-hsB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXc-1y-HA6">
+                                <rect key="frame" x="309" y="28" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="save:" destination="hdE-r8-RUE" eventType="touchUpInside" id="MPL-nd-7B8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uku-EG-hsB" firstAttribute="top" secondItem="iZu-vf-ItA" secondAttribute="bottom" constant="-20" id="38w-qi-hoj"/>
+                            <constraint firstAttribute="trailing" secondItem="uku-EG-hsB" secondAttribute="trailing" id="3FV-D6-IGz"/>
+                            <constraint firstItem="aWa-Ew-d4f" firstAttribute="top" secondItem="uku-EG-hsB" secondAttribute="bottom" id="fkx-HL-MkR"/>
+                            <constraint firstItem="uku-EG-hsB" firstAttribute="leading" secondItem="HKL-R6-Ift" secondAttribute="leading" id="kZ3-to-0TL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoImage" destination="uku-EG-hsB" id="CCq-dE-Aum"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HVO-VF-0md" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1777" y="108"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gRI-5E-vb8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8L9-ZN-11y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Z4s-hn-vWT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jQL-5x-C3P"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UBy-9b-me9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="190" y="124"/>
+        </scene>
+    </scenes>
+</document>
